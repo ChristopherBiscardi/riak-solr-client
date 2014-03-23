@@ -16,8 +16,17 @@ build-type:          Simple
 cabal-version:       >=1.8
 
 library
-  -- exposed-modules:     
+  hs-source-dirs: src  
+  exposed-modules:
+    Network.Riak.Solr
+    Network.Riak.Solr.Types
   -- other-modules:       
   build-depends:
-    base ==4.6.*,
-    http-streams == *
+    base == 4.6.*,
+    http-streams >= 0.7.0.0,
+    bytestring   >= 0.10.0.2,
+    io-streams   >= 1.1.4.0,
+    aeson        >= 0.7.0.1,
+    containers   >= 0.5.0.0,
+    text         >= 0.11.3.0 && < 0.12,
+    lens         >= 4.0.0    && < 5.0.0
