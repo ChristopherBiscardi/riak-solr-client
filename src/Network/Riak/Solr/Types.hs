@@ -87,6 +87,7 @@ data DocHolder a = DocHolder {
 instance (FromJSON a) => FromJSON (DocHolder a) where
   parseJSON val = DocHolder <$> parseJSON val
                             <*> parseJSON val
+
 makeLenses ''SolrResponse
 makeLenses ''Results
 makeLenses ''DocHolder

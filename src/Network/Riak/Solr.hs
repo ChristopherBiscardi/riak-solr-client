@@ -12,7 +12,9 @@
 
 module Network.Riak.Solr
        (rawQuery
-         ) where
+       ,simpleGet
+       ,fromResult
+                            ) where
 
 import           Control.Applicative
 import           Data.Aeson
